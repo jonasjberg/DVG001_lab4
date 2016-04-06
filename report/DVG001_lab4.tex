@@ -25,9 +25,7 @@
 \usepackage{fullpage}
 
 \usepackage{csquotes}               % Behövs av biblatex
-%\usepackage[natbib=true,
-%            style=numeric,
-%            backend=biber]{biblatex}
+
 \usepackage[natbib=true,
             style=ieee,
             backend=biber]{biblatex}
@@ -55,13 +53,13 @@
             hidelinks]{hyperref}
 
 \newcommand{\screenshot}[4]{
-  \begin{figure}[H]
-  \centering
-  %\includegraphics[width=\linewidth]{#1}
-  \includegraphics[height=8.0cm]{#1}
-  \caption[#2]{#3}
-  \label{#4}
-  \end{figure}
+\begin{figure}[H]
+\centering
+%\includegraphics[width=\linewidth]{#1}
+\includegraphics[height=8.0cm]{#1}
+\caption[#2]{#3}
+\label{#4}
+\end{figure}
 }
 
 \usepackage{minted}
@@ -72,47 +70,47 @@
 \usepackage{listings}
 
 \newmintedfile[shellcode]{bash}{
-  %bgcolor             = mintedbackground,
-  %fontfamily          = tt,
-  fontsize             = \footnotesize,
-  linenos              = true,
-  numberblanklines     = true,
-  numbersep            = 12pt,
-  numbersep            = 5pt,
-  %gobble              = 0,
-  frame                = lines,
-  %framerule           = 0.4pt,
-  framesep             = 2mm,
-  funcnamehighlighting = true,
-  tabsize              = 4,
-  obeytabs             = false,
-  mathescape           = false
-  samepage             = false,
-  showspaces           = false,
-  showtabs             = false,
-  texcl                = false,
+%bgcolor=mintedbackground,
+%fontfamily=tt,
+fontsize=\footnotesize,
+linenos=true,
+numberblanklines=true,
+numbersep=12pt,
+numbersep=5pt,
+%gobble= 0,
+frame= lines,
+%framerule= 0.4pt,
+framesep=2mm,
+funcnamehighlighting=true,
+tabsize=4,
+obeytabs=false,
+mathescape=false
+samepage=false,
+showspaces=false,
+showtabs=false,
+texcl=false,
 }
 
 \newmintedfile[configfile]{linux-config}{
-  %bgcolor             = mintedbackground,
-  %fontfamily          = tt,
-  fontsize             = \footnotesize,
-  linenos              = true,
-  numberblanklines     = true,
-  numbersep            = 12pt,
-  numbersep            = 5pt,
-  %gobble              = 0,
-  frame                = lines,
-  %framerule           = 0.4pt,
-  framesep             = 2mm,
-  funcnamehighlighting = true,
-  tabsize              = 4,
-  obeytabs             = false,
-  mathescape           = false
-  samepage             = false,
-  showspaces           = false,
-  showtabs             = false,
-  texcl                = false,
+%bgcolor=mintedbackground,
+%fontfamily=tt,
+fontsize=\footnotesize,
+linenos=true,
+numberblanklines=true,
+numbersep=12pt,
+numbersep=5pt,
+%gobble=0,
+frame=lines,
+%framerule=0.4pt,
+framesep=2mm,
+funcnamehighlighting=true,
+tabsize=4,
+obeytabs=false,
+mathescape=false
+samepage=false,
+showspaces=false,
+showtabs=false,
+texcl=false,
 }
 
 
@@ -130,7 +128,7 @@
 
 \title{\textsc{DVG001}                         \\
        Introduktion till Linux och små nätverk \\
-       Laboration 3}
+       Laboration 4}
 
 \author{                                 \\
   Jonas Sjöberg                          \\
@@ -173,14 +171,13 @@
   \listoftables
   \listoflistings
 
-  \expandafter\def\csname PY@tok@err\endcsname{}
+  %\expandafter\def\csname PY@tok@err\endcsname{}
 
   \newpage
   \input{tex/intro.tex}
-  %\input{tex/content.tex}
+  \input{tex/content.tex}
   \input{tex/part1.tex}
   \input{tex/part2.tex}
-  \input{tex/part3.tex}
 
   \newpage
   \input{tex/results.tex}
