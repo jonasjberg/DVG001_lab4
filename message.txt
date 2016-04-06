@@ -1,0 +1,17 @@
+Introduktion till Linux och små nätverk 7,5 hp, distans, VT16
+================================================================================
+
+
+Inlämningsuppgift fyra
+----------------------
+
+Bifogade filer: Fil Laboration4.pdf (92,432 KB)
+
+Här skall ni få undersöka eran dators nätverk och bekanta er med de kommandon
+som är användbara för att se hur nätverket fungerar på låg nivå.
+
+Ni behöver ha läsa till F4 för att få tillräckligt information för att klara
+den här.
+
+
+**Tidsfristen för laborationen är satt till 11/4 kl 23:59.**
