@@ -64,7 +64,7 @@ skall använda `ip address show`, men ni får gärna jämföra med
 
 #### Uppgift:
 Ni skall ta reda på vilken IP-adress som maskinen har samt hur den får sin
-adressen utifrån att använda kommandot ip och titta i loggar, exempelvis
+adressen utifrån att använda kommandot `ip` och titta i loggar, exempelvis
 `/var/log/messages`. Ange hur ni får tag på det, jag skall kunna se vad ni
 hämtat datat ifrån.
 
