@@ -1,0 +1,78 @@
+% ______________________________________________________________________________
+%
+% DVG001 -- Introduktion till Linux och små nätverk
+%                              Inlämningsuppgift #3
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+% Author:   Jonas Sjöberg
+%           tel12jsg@student.hig.se
+%
+% Date:     2016-03-15 -- 2016-03-20
+%
+% License:  Creative Commons Attribution 4.0 International (CC BY 4.0)
+%           <http://creativecommons.org/licenses/by/4.0/legalcode>
+%           See LICENSE.md for additional licensing information.
+% ______________________________________________________________________________
+
+
+\section{Genomförande}
+% Här skriver ni vilka steg ni gjorde och resultatet av dem. Ni skall ha med
+% information så att vi kan se hur ni har gjort, dvs beskrivande text,
+% skärmdumpar, bilder etc.  Längre skärmdumpar, innehåll i relevanta filer och
+% större bilder lägger ni i bilagor, som bilaga I, så att de inte tar över en
+% sida själva.
+% Kommandon som ni skriver i ett skal skall skrivas i detta format, som är
+% teckenformatmall ”Exempel” i OpenOffice/LibreOffice. Detta så att de
+% skiljer sig från övriga brödtext i stycket.  Detta underlättar läsningen för
+% andra, som oss lärare.
+
+
+
+
+% ______________________________________________________________________________
+\subsection{Inledande åtgärder}
+
+\subsubsection{Montera den delade mappen automatiskt}
+Den delade mappen som konfigurerats tidigare under installationen av
+gästsystemet har hittils monterats manuellt innan varje användning med
+kommandot i Programlistning~\ref{listing:mount-share-manual}.
+
+\begin{listing}[H]
+  \shellcode{tex/mount-share-manual.sh}
+  \caption{Kommando för att montera den delade mappen}
+  \label{listing:mount-share-manual}
+\end{listing}
+
+Istället för att behöva göra det manuellt varje gång kan mappen läggas till i
+\texttt{/etc/fstab} och monteras automatiskt vid systemstart.
+
+Först görs en säkerhetskopia av \texttt{/etc/fstab} enligt
+Programlistning~\ref{listing:mount-fstab-backup}.
+
+\begin{listing}[H]
+  \shellcode{tex/mount-fstab-backup.sh}
+  \caption{Kommando för att skapa en säkerhetskopia av den befintliga filen.}
+  \label{listing:mount-fstab-backup}
+\end{listing}
+
+Filen öppnas sedan i \texttt{Vim} med \texttt{root}-rättigheter genom
+\texttt{sudo} och en extra rad läggs till enligt \cite{virtualbox:mntshare}.
+
+Den ändrade filens innehåll visas
+Programlistning~\ref{listing:mount-fstab-new}.
+
+\begin{listing}[H]
+  \shellcode{tex/mount-fstab-new.sh}
+  \caption{Innehåll i filen \texttt{/etc/fstab} efter modifiering.}
+  \label{listing:mount-fstab-new}
+\end{listing}
+
+För att få tillgång till den delade mapp som moteras automatiskt genom
+\texttt{Guest Additions} måste användaren vara medlem av gruppen \texttt{vboxsf}
+
+
+% Byt nätverkstyp i VirtualBox till bridged
+% Kolla ip-adress, ifconfig deprecated (?)
+% $ ip a
+% ...
+
+
