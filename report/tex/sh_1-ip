@@ -1,0 +1,6 @@
+jonas@debian:~$ ip addr show | grep inet
+    inet 127.0.0.1/8 scope host lo
+    inet6 ::1/128 scope host 
+    inet 192.168.1.112/24 brd 192.168.1.255 scope global dynamic eth0
+    inet6 fe80::a00:27ff:fef1:84e/64 scope link 
+jonas@debian:~$  
