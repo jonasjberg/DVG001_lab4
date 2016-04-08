@@ -1,0 +1,63 @@
+192.168.1.112
+Searching through file "/var/log/syslog.1"
+[35m[K/var/log/syslog.1[m[K[36m[K:[m[K[32m[K892[m[K[36m[K:[m[KApr  8 16:53:20 debian NetworkManager[428]: <info>   address [01;31m[K192.168.1.112[m[K
+[35m[K/var/log/syslog.1[m[K[36m[K:[m[K[32m[K900[m[K[36m[K:[m[KApr  8 16:53:20 debian avahi-daemon[458]: Joining mDNS multicast group on interface eth0.IPv4 with address [01;31m[K192.168.1.112[m[K.
+[35m[K/var/log/syslog.1[m[K[36m[K:[m[K[32m[K902[m[K[36m[K:[m[KApr  8 16:53:20 debian avahi-daemon[458]: Registering new address record for [01;31m[K192.168.1.112[m[K on eth0.IPv4.
+[35m[K/var/log/syslog.1[m[K[36m[K:[m[K[32m[K910[m[K[36m[K:[m[KApr  8 16:53:20 debian dhclient: bound to [01;31m[K192.168.1.112[m[K -- renewal in 2954 seconds.
+[35m[K/var/log/syslog.1[m[K[36m[K:[m[K[32m[K918[m[K[36m[K:[m[KApr  8 16:53:21 debian ntpd[500]: Listen normally on 5 eth0 [01;31m[K192.168.1.112[m[K UDP 123
+Searching through file "/var/log/VBoxGuestAdditions.log"
+Searching through file "/var/log/kern.log.1"
+Searching through file "/var/log/daemon.log.1"
+Searching through file "/var/log/vboxadd-install.log"
+Searching through file "/var/log/user.log.1"
+Searching through file "/var/log/debug.1"
+Searching through file "/var/log/daemon.log"
+[35m[K/var/log/daemon.log[m[K[36m[K:[m[K[32m[K177[m[K[36m[K:[m[KApr  7 21:43:44 debian NetworkManager[428]: <info>   address [01;31m[K192.168.1.112[m[K
+[35m[K/var/log/daemon.log[m[K[36m[K:[m[K[32m[K185[m[K[36m[K:[m[KApr  7 21:43:44 debian avahi-daemon[456]: Joining mDNS multicast group on interface eth0.IPv4 with address [01;31m[K192.168.1.112[m[K.
+[35m[K/var/log/daemon.log[m[K[36m[K:[m[K[32m[K187[m[K[36m[K:[m[KApr  7 21:43:44 debian avahi-daemon[456]: Registering new address record for [01;31m[K192.168.1.112[m[K on eth0.IPv4.
+[35m[K/var/log/daemon.log[m[K[36m[K:[m[K[32m[K193[m[K[36m[K:[m[KApr  7 21:43:44 debian dhclient: bound to [01;31m[K192.168.1.112[m[K -- renewal in 2808 seconds.
+[35m[K/var/log/daemon.log[m[K[36m[K:[m[K[32m[K207[m[K[36m[K:[m[KApr  7 21:43:46 debian ntpd[520]: Listen normally on 4 eth0 [01;31m[K192.168.1.112[m[K UDP 123
+[35m[K/var/log/daemon.log[m[K[36m[K:[m[K[32m[K671[m[K[36m[K:[m[KApr  8 16:53:20 debian NetworkManager[428]: <info>   address [01;31m[K192.168.1.112[m[K
+[35m[K/var/log/daemon.log[m[K[36m[K:[m[K[32m[K679[m[K[36m[K:[m[KApr  8 16:53:20 debian avahi-daemon[458]: Joining mDNS multicast group on interface eth0.IPv4 with address [01;31m[K192.168.1.112[m[K.
+[35m[K/var/log/daemon.log[m[K[36m[K:[m[K[32m[K681[m[K[36m[K:[m[KApr  8 16:53:20 debian avahi-daemon[458]: Registering new address record for [01;31m[K192.168.1.112[m[K on eth0.IPv4.
+[35m[K/var/log/daemon.log[m[K[36m[K:[m[K[32m[K689[m[K[36m[K:[m[KApr  8 16:53:20 debian dhclient: bound to [01;31m[K192.168.1.112[m[K -- renewal in 2954 seconds.
+[35m[K/var/log/daemon.log[m[K[36m[K:[m[K[32m[K696[m[K[36m[K:[m[KApr  8 16:53:21 debian ntpd[500]: Listen normally on 5 eth0 [01;31m[K192.168.1.112[m[K UDP 123
+[35m[K/var/log/daemon.log[m[K[36m[K:[m[K[32m[K1061[m[K[36m[K:[m[KApr  8 18:50:55 debian NetworkManager[432]: <info>   address [01;31m[K192.168.1.112[m[K
+[35m[K/var/log/daemon.log[m[K[36m[K:[m[K[32m[K1069[m[K[36m[K:[m[KApr  8 18:50:55 debian avahi-daemon[459]: Joining mDNS multicast group on interface eth0.IPv4 with address [01;31m[K192.168.1.112[m[K.
+[35m[K/var/log/daemon.log[m[K[36m[K:[m[K[32m[K1071[m[K[36m[K:[m[KApr  8 18:50:55 debian avahi-daemon[459]: Registering new address record for [01;31m[K192.168.1.112[m[K on eth0.IPv4.
+[35m[K/var/log/daemon.log[m[K[36m[K:[m[K[32m[K1077[m[K[36m[K:[m[KApr  8 18:50:55 debian dhclient: bound to [01;31m[K192.168.1.112[m[K -- renewal in 2777 seconds.
+[35m[K/var/log/daemon.log[m[K[36m[K:[m[K[32m[K1112[m[K[36m[K:[m[KApr  8 18:50:58 debian ntpd[488]: Listen normally on 4 eth0 [01;31m[K192.168.1.112[m[K UDP 123
+Searching through file "/var/log/fontconfig.log"
+Searching through file "/var/log/user.log"
+Searching through file "/var/log/dpkg.log.1"
+Searching through file "/var/log/syslog"
+[35m[K/var/log/syslog[m[K[36m[K:[m[K[32m[K791[m[K[36m[K:[m[KApr  8 18:50:55 debian NetworkManager[432]: <info>   address [01;31m[K192.168.1.112[m[K
+[35m[K/var/log/syslog[m[K[36m[K:[m[K[32m[K799[m[K[36m[K:[m[KApr  8 18:50:55 debian avahi-daemon[459]: Joining mDNS multicast group on interface eth0.IPv4 with address [01;31m[K192.168.1.112[m[K.
+[35m[K/var/log/syslog[m[K[36m[K:[m[K[32m[K802[m[K[36m[K:[m[KApr  8 18:50:55 debian avahi-daemon[459]: Registering new address record for [01;31m[K192.168.1.112[m[K on eth0.IPv4.
+[35m[K/var/log/syslog[m[K[36m[K:[m[K[32m[K808[m[K[36m[K:[m[KApr  8 18:50:55 debian dhclient: bound to [01;31m[K192.168.1.112[m[K -- renewal in 2777 seconds.
+[35m[K/var/log/syslog[m[K[36m[K:[m[K[32m[K857[m[K[36m[K:[m[KApr  8 18:50:58 debian ntpd[488]: Listen normally on 4 eth0 [01;31m[K192.168.1.112[m[K UDP 123
+Searching through file "/var/log/Xorg.0.log.old"
+Searching through file "/var/log/debug"
+Searching through file "/var/log/installer/lsb-release"
+Searching through file "/var/log/installer/cdebconf/questions.dat"
+Searching through file "/var/log/installer/cdebconf/templates.dat"
+Searching through file "/var/log/installer/syslog"
+Searching through file "/var/log/installer/partman"
+Searching through file "/var/log/installer/Xorg.0.log"
+Searching through file "/var/log/installer/hardware-summary"
+Searching through file "/var/log/installer/status"
+Searching through file "/var/log/kern.log"
+Searching through file "/var/log/messages.1"
+Searching through file "/var/log/auth.log.1"
+Searching through file "/var/log/auth.log"
+Searching through file "/var/log/lightdm/lightdm.log"
+Searching through file "/var/log/lightdm/x-0.log"
+Searching through file "/var/log/lightdm/lightdm.log.old"
+Searching through file "/var/log/lightdm/x-0.log.old"
+Searching through file "/var/log/cups/access_log.1"
+Searching through file "/var/log/messages"
+Searching through file "/var/log/vboxadd-install-x11.log"
+Searching through file "/var/log/Xorg.0.log"
+Searching through file "/var/log/alternatives.log.1"
+Searching through file "/var/log/exim4/mainlog.1"
+Searching through file "/var/log/exim4/mainlog"

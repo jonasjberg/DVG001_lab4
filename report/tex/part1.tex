@@ -27,18 +27,42 @@ loggar, exempelvis \texttt{/var/log/messages}.
 
 
 \subsubsection{Lösning}
-% TODO: Beskriv lösningen av uppgiften ..
 För att ta reda på datorns \texttt{IP}-adress körs kommandot i
 Programlistning~\ref{listing:sh_1-ip}.
 
 \begin{listing}[H]
-\shellcode{tex/sh_1-ip}
+\shellcode{include/sh_1-ip}
 \caption{Kommando för att ta reda på datorns \texttt{IP}-adress.}
 \label{listing:sh_1-ip}
 \end{listing}
 
 Resultatet visar att datorns \texttt{IP}-adress är \texttt{192.168.1.112} 
 med nätmasken \texttt{24}.
+
+Ett shell-skript används för att söka igenom loggar efter den aktuella
+\texttt{IP}-adressen. Programmet letar efter filer i sökvägen \texttt{/var/log}
+och undersöker filernas innehåll genom att läsa ''magic header bytes'' som
+avgör vilken typ av fil det är. Om en hittad fil är en vanlig textfil söks dess
+innehåll efter datorns aktuella \texttt{IP}-adress som extarherats tidigare.
+
+Programmet visas i Programlistning~\ref{listing:sh_1-grep-logs.sh} och
+resultatet av en körning visas i
+Programlistning~\ref{listing:sh_1-grep-logs.sh_output}
+
+\begin{listing}[H]
+  \shellcode{include/sh_1-grep-logs.sh}
+  \caption{Kommando för att sök igenom textfiler i \texttt{/var/log} efter
+           datorns gällande \texttt{IP}-adress.}
+  \label{listing:sh_1-grep-logs.sh}
+\end{listing}
+
+\begin{figure}[htp]
+  \centering 
+  \includegraphics[scale=0.75]{include/sh_1-grep-logs.sh_output.pdf}
+  \caption{Körning av programmet i Programlistning~\ref{listing:sh_1-grep-logs.sh}.}
+  \label{listing:sh_1-grep-logs.sh_output}
+\end{figure}
+
 
 % ______________________________________________________________________________
 \subsection{Nät- och Nodnummer}
