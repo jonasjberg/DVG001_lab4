@@ -31,9 +31,9 @@ För att ta reda på datorns \texttt{IP}-adress körs kommandot i
 Programlistning~\ref{listing:sh_1-ip}.
 
 \begin{listing}[H]
-\shellcode{include/sh_1-ip}
-\caption{Kommando för att ta reda på datorns \texttt{IP}-adress.}
-\label{listing:sh_1-ip}
+  \shellcode{include/sh_1-ip}
+  \caption{Kommando för att ta reda på datorns \texttt{IP}-adress.}
+  \label{listing:sh_1-ip}
 \end{listing}
 
 Resultatet visar att datorns \texttt{IP}-adress är \texttt{192.168.1.112} 
@@ -47,20 +47,39 @@ innehåll efter datorns aktuella \texttt{IP}-adress som extarherats tidigare.
 
 Programmet visas i Programlistning~\ref{listing:sh_1-grep-logs.sh} och
 resultatet av en körning visas i
-Programlistning~\ref{listing:sh_1-grep-logs.sh_output}
+Figur~\ref{fig:sh_1-grep-logs.sh_output}
 
 \begin{listing}[H]
   \shellcode{include/sh_1-grep-logs.sh}
-  \caption{Kommando för att sök igenom textfiler i \texttt{/var/log} efter
-           datorns gällande \texttt{IP}-adress.}
+  \caption{Kommando för att söka igenom loggar i sökvägen \texttt{/var/log}
+           efter omnämnanden av datorns aktuella \texttt{IP}-adress.}
   \label{listing:sh_1-grep-logs.sh}
 \end{listing}
 
 \begin{figure}[htp]
   \centering 
-  \includegraphics[scale=0.75]{include/sh_1-grep-logs.sh_output.pdf}
+  \includegraphics[scale=0.85]{include/sh_1-grep-logs-sh_output.pdf}
   \caption{Körning av programmet i Programlistning~\ref{listing:sh_1-grep-logs.sh}.}
-  \label{listing:sh_1-grep-logs.sh_output}
+  \label{fig:sh_1-grep-logs.sh_output}
+\end{figure}
+
+Bland resultaten finns omnämnanden av \texttt{mDNS} som rör \texttt{DHCP}.
+Instruktionerna nämner också att den grafiska miljön har verktyg för att
+konfigurera nätverksinställningar, en skärmdump på detta visas i
+Figur~\ref{fig:scr_1-network_A} och Figur~\ref{fig:scr_1-network_B} .
+
+\begin{figure}[htp]
+  \centering 
+  \includegraphics[scale=0.35]{include/scr_1-network_A.png}
+  \caption{Nätverksinställningar i det grafiska gränssnittet.}
+  \label{fig:scr_1-network_A}
+\end{figure}
+
+\begin{figure}[htp]
+  \centering 
+  \includegraphics[scale=0.35]{include/scr_1-network_B.png}
+  \caption{Nätverksinställningar i det grafiska gränssnittet.}
+  \label{fig:scr_1-network_B}
 \end{figure}
 
 

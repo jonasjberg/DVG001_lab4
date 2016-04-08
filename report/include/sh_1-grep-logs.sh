@@ -23,8 +23,6 @@ IP_ADRESS=$(ip -oneline -family inet addr show eth0 | awk '{print $4}')
 IP_ADRESS=${IP_ADRESS//\/[0-9][0-9]}
 [ -n "$IP_ADRESS" ] || { printf "IP == NULL -- exiting.\n" 2>&1 ; exit 1 ; }
 
-echo "$IP_ADRESS"
-
 # Hitta alla textfiler i '/var/log' och sök i dem efter den aktuella IP-adressen.
 # Filtypen bedöms efter "magic header bytes" som läses av kommandot "file".
 sudo find /var/log -type f | while IFS= read -r f
