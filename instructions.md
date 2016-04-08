@@ -174,10 +174,11 @@ Om ni får problem, så ställ frågor i forumet som finns i BlackBoard. Att lä
 sig att administrera datorer handlar om att i forum kunna ställa rätt frågor,
 så det kan ni gärna öva på här.
 
-När ni ställer en fråga, så skall ni beskriva vad ni vill göra, vad ni har gjort samt vad ni förväntat
-er skall ske samt vad som skett. Om ni beskriver för dåligt, så kommer ni att få frågor om mer
-information. Tänk på att de som läser era frågor inte har sett vad ni gjort, så det är ert ansvar
-att förklara så att de andra förstår ert problem och kan besvara frågan.
+När ni ställer en fråga, så skall ni beskriva vad ni vill göra, vad ni har
+gjort samt vad ni förväntat er skall ske samt vad som skett. Om ni beskriver
+för dåligt, så kommer ni att få frågor om mer information. Tänk på att de som
+läser era frågor inte har sett vad ni gjort, så det är ert ansvar att förklara
+så att de andra förstår ert problem och kan besvara frågan.
 
 Ni får även gärna svara på frågor i BlackBoard, där medstudenter förklarat vad
 de försökt med och vad som inte gått som de tänkt. Begär mer information om ni
