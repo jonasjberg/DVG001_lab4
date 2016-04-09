@@ -36,14 +36,14 @@ Programlistning~\ref{listing:sh_1-ip}.
   \label{listing:sh_1-ip}
 \end{listing}
 
-Resultatet visar att datorns \texttt{IP}-adress är \texttt{192.168.1.112} 
+Resultatet visar att datorns \texttt{IP}-adress är \texttt{192.168.1.112}
 med nätmasken \texttt{24}.
 
 Ett shell-skript används för att söka igenom loggar efter den aktuella
 \texttt{IP}-adressen. Programmet letar efter filer i sökvägen \texttt{/var/log}
 och undersöker filernas innehåll genom att läsa ''magic header bytes'' som
 avgör vilken typ av fil det är. Om en hittad fil är en vanlig textfil söks dess
-innehåll efter datorns aktuella \texttt{IP}-adress som extarherats tidigare.
+innehåll efter datorns aktuella \texttt{IP}-adress som extraherats tidigare.
 
 Programmet visas i Programlistning~\ref{listing:sh_1-grep-logs.sh} och
 resultatet av en körning visas i
@@ -57,7 +57,7 @@ Figur~\ref{fig:sh_1-grep-logs.sh_output}
 \end{listing}
 
 \begin{figure}[htp]
-  \centering 
+  \centering
   \includegraphics[scale=0.85]{include/sh_1-grep-logs-sh_output.pdf}
   \caption{Körning av programmet i Programlistning~\ref{listing:sh_1-grep-logs.sh}.}
   \label{fig:sh_1-grep-logs.sh_output}
@@ -69,14 +69,14 @@ konfigurera nätverksinställningar, en skärmdump på detta visas i
 Figur~\ref{fig:scr_1-network_A} och Figur~\ref{fig:scr_1-network_B} .
 
 \begin{figure}[htp]
-  \centering 
+  \centering
   \includegraphics[scale=0.35]{include/scr_1-network_A.png}
   \caption{Nätverksinställningar i det grafiska gränssnittet.}
   \label{fig:scr_1-network_A}
 \end{figure}
 
 \begin{figure}[htp]
-  \centering 
+  \centering
   \includegraphics[scale=0.35]{include/scr_1-network_B.png}
   \caption{Nätverksinställningar i det grafiska gränssnittet.}
   \label{fig:scr_1-network_B}
@@ -91,7 +91,24 @@ Uppgiften är här att ange vilken nätadress man har genom att använda
 
 
 \subsubsection{Lösning}
-% TODO: Beskriv lösningen av uppgiften ..
+För detaljerad information om datorns \texttt{IP}-adress körs kommandot i
+Programlistning~\ref{listing:sh_1-ipcalc}. Resultatet av körningen visas i
+Figur~\ref{fig:sh_1-ipcalc_output}
+
+\begin{listing}[H]
+  \shellcode{include/sh_1-ipcalc}
+  \caption{Kommando för att visa detaljerad information om en
+           \texttt{IP}-adress.}
+  \label{listing:sh_1-ipcalc}
+\end{listing}
+
+\begin{figure}[htp]
+  \centering
+  \includegraphics[scale=0.85]{include/sh_1-ipcalc_output.pdf}
+  \caption{Körning av programmet i Programlistning~\ref{listing:sh_1-ipcalc}.}
+  \label{fig:sh_1-ipcalc_output}
+\end{figure}
+
 
 
 % ______________________________________________________________________________
@@ -101,13 +118,36 @@ Uppgiften är att lista de routrar som maskinen känner till och dessutom ange
 vilken som är standardroutern.
 
 \subsubsection{Lösning}
-% TODO: Beskriv lösningen av uppgiften ..
+För att få en lista på routrar som datorn känner till används kommandot \texttt{ip route list}.
+Körning med resultat visas i Programlistning~\ref{listing:sh_1-ip-route-list}.
 
+\begin{listing}[H]
+  \shellcode{include/sh_1-ip-route-list}
+  \caption{Körning av kommando för att lista information om routers på nätverk.}
+  \label{listing:sh_1-ip-route-list}
+\end{listing}
+
+Resultatet visar att standard-routern har \texttt{IP}-adress \texttt{192.168.1.1}.
+
+Lite mer detaljerad men i stort sett samma information kan fås med \texttt{ip
+neighbor} som i Programlistning~\ref{listing:sh_1-ip-neighbor}. 
+
+\begin{listing}[H]
+  \shellcode{include/sh_1-ip-neighbor}
+  \caption{Körning av kommando för att lista information maskiner i samma nät.}
+  \label{listing:sh_1-ip-neighbor}
+\end{listing}
+
+Anmärkningsvärt är att datorn rapporterar att den enhet som används är av typen
+\texttt{eth0}.  Men eftersom att datorn körs som en virtuell maskin på en
+laptop som ansluter till nätverket genom en trådlös WIFI-anslutning så är det
+uppenbarligen inte sant.  Den trådbundna anslutningen är virtuell och skapas av
+\texttt{VirtualBox}.
 
 % ______________________________________________________________________________
 \subsectionM{\texttt{MAC}-adresser}
 \subsubsection{Uppgiftsbeskrivning}
-Här är uppgiften att lista \texttt{MAC}- och \texttt{IP}-adresser för alla 
+Här är uppgiften att lista \texttt{MAC}- och \texttt{IP}-adresser för alla
 maskiner i nätverket.
 
 \subsubsection{Lösning}

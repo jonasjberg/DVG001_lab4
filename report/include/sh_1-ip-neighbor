@@ -1,0 +1,2 @@
+root@debian:/etc/network# ip -stats neigh
+192.168.1.1 dev eth0 lladdr f4:ec:38:a7:8b:a4 ref 1 used 21/19/19 probes 1 REACHABLE
