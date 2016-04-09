@@ -152,14 +152,24 @@ maskiner i nätverket.
 
 \subsubsection{Lösning}
 
-För mer avancerade möjligheter används programmet \texttt{nmap}, som enkelt
-kan installeras från paketarkiven med t.ex. \texttt{apt}.
-Programmet \texttt{nmap} är väldigt kraftfullt och har många användningsområden.
-I det här fallet körs \texttt{nmap -sn -v 192.168.1.1/24}.
-Flaggan \texttt{-sn} innebär att \texttt{nmap} kör en enklare typ av skanning,
-''no port scan'', ''ping scan'' eller ''ping sweep''.
+För mer avancerade möjligheter används programmet \texttt{nmap}, som enkelt kan
+installeras från paketarkiven med t.ex. \texttt{apt}.  Programmet \texttt{nmap}
+är väldigt kraftfullt och har många användningsområden.  I det här fallet körs
+\texttt{nmap -sn -v 192.168.1.1/24}.  Flaggan \texttt{-sn} innebär att
+\texttt{nmap} kör en enklare typ av skanning, ''no port scan'', ''ping scan''
+eller ''ping sweep''.
 
-Följande beskrivning är hämtad ur manualsidan för \texttt{nmap(1)}:
+Följande beskrivning är hämtad ur manualsidan för \texttt{nmap(1)}
+\cite{manpage:nmap}:
+
+\begin{quotation}
+When  the  server  is  unreachable, send a burst of eight packets
+instead of the usual one.  The packet spacing is normally 2 s; however, the
+spacing between the first and second packets can be changed with the calldelay
+command to allow additional time for a modem or ISDN call to  complete.   This
+option is valid with only the server command and is a recommended option with
+this command.
+\end{quotation}
 
 \begin{quotation}
 Systems administrators often find this option valuable as well. It can easily
@@ -176,5 +186,18 @@ to scan targets on a local ethernet network, ARP requests are used unless
 --send-ip was specified. 
 \end{quotation}
 
-Många gånger kan programmet vara ''overkill'' men det är mycket populärt och
-otroligt användbart i många scenarion.
+Vidare ökar flaggar \texttt{-v} mängden text (''verbose mode'') och 
+\texttt{IP}-adresserna 
+
+
+Även om \texttt{nmap} i det här fallet gott kan anses vara ''overkill'' så är
+det användbart i många scenarion och därför bra att känna till.
+
+Körning visas i Programlistning~\ref{listing:sh_1-nmap-sn}.
+
+\begin{listing}[H]
+  \shellcode{include/sh_1-nmap-sn}
+  \caption{Körning av portskannern \texttt{nmap} för att lista datorer på
+           nätverket.}
+  \label{listing:sh_1-nmap-sn}
+\end{listing}
