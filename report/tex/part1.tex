@@ -151,6 +151,30 @@ Här är uppgiften att lista \texttt{MAC}- och \texttt{IP}-adresser för alla
 maskiner i nätverket.
 
 \subsubsection{Lösning}
-% TODO: Beskriv lösningen av uppgiften ..
 
+För mer avancerade möjligheter används programmet \texttt{nmap}, som enkelt
+kan installeras från paketarkiven med t.ex. \texttt{apt}.
+Programmet \texttt{nmap} är väldigt kraftfullt och har många användningsområden.
+I det här fallet körs \texttt{nmap -sn -v 192.168.1.1/24}.
+Flaggan \texttt{-sn} innebär att \texttt{nmap} kör en enklare typ av skanning,
+''no port scan'', ''ping scan'' eller ''ping sweep''.
 
+Följande beskrivning är hämtad ur manualsidan för \texttt{nmap(1)}:
+
+\begin{quotation}
+Systems administrators often find this option valuable as well. It can easily
+be used to count available machines on a network or monitor server
+availability. This is often called a ping sweep, and is more reliable than
+pinging the broadcast address because many hosts do not reply to broadcast
+queries.
+
+The default host discovery done with -sn consists of an ICMP echo request, TCP
+SYN to port 443, TCP ACK to port 80, and an ICMP timestamp request by default.
+When executed by an unprivileged user, only SYN packets are sent (using a
+connect call) to ports 80 and 443 on the target. When a privileged user tries
+to scan targets on a local ethernet network, ARP requests are used unless
+--send-ip was specified. 
+\end{quotation}
+
+Många gånger kan programmet vara ''overkill'' men det är mycket populärt och
+otroligt användbart i många scenarion.
