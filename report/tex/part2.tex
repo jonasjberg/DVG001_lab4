@@ -15,7 +15,8 @@
 
 
 \section{Del två}
-% TODO: introduktion till del 2
+Den här delen behandlar konfiguration nätverksinställningar med filen
+''\texttt{/etc/network/interface}''.
 
 
 % ______________________________________________________________________________
@@ -33,10 +34,19 @@ Hur skulle ni skriva \texttt{/etc/network/interface} för respektive maskin
 \textbf{m1} och \textbf{m2}?  Ange hur ni har kommit fram till innehållet i
 filen.
 
+
+\subsubsection{Lösning}
 För att räkna ut nätadresserna för \textbf{m1} och \textbf{m2} används programmet
 \texttt{ipcalc} enligt Programlistning~\ref{listing:sh_2-ipcalc}.
+Resultatet presenteras mer överskådligt i Tabell~\ref{table:interface-config}.
 
- återges i Tabell~\ref{table:interface-config}.
+
+\begin{listing}[H]
+  \shellcode{include/sh_2-ipcalc}
+  \caption{Körning av programmet \texttt{ipcalc} för att räkna ut adresser.}
+  \label{listing:sh_2-ipcalc}
+\end{listing}
+
 
 \begin{table}[]
   \centering
@@ -52,5 +62,4 @@ För att räkna ut nätadresserna för \textbf{m1} och \textbf{m2} används prog
   \end{tabular}
 \end{table}
 
-\subsubsection{Lösning}
-% TODO: Beskriv lösningen av uppgiften ..
+Programmet klagar över den märkliga nätmasken.
