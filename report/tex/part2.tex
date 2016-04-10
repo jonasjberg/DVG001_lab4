@@ -33,6 +33,24 @@ Hur skulle ni skriva \texttt{/etc/network/interface} för respektive maskin
 \textbf{m1} och \textbf{m2}?  Ange hur ni har kommit fram till innehållet i
 filen.
 
+router   192.168.133.193/25
+
+Problembeskrivningen återges i Tabell~\ref{table:network}.
+
+\begin{table}[]
+  \centering
+  \caption{Lista över \texttt{MAC}- och \texttt{IP}-adresser för maskiner på
+           nätverket.}
+  \label{table:network}
+  \begin{tabular}{@{}llll@{}}
+    \toprule
+    Enhet   & \texttt{IP}-adress     & \texttt{MAC}-address       & Enhetens tillverkare          \\ \midrule
+    router  & \texttt{192.168.133.193/25} & 
+    m1      & \texttt{192.168.1.1}   & \texttt{04:EC:08:A7:8B:A0} & Tp-link Technologies CO.      \\
+    m2      & \texttt{192.168.1.101} & \texttt{08:9E:0C:A4:50:30} & Apple                         \\
+    \texttt{192.168.1.110} & \texttt{04:11:0B:37:FC:90} & Hewlett Packard               \\ \bottomrule
+  \end{tabular}
+\end{table}
+
 \subsubsection{Lösning}
 % TODO: Beskriv lösningen av uppgiften ..
-

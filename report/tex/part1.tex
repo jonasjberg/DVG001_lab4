@@ -15,7 +15,7 @@
 
 
 \section{Del ett}
-% TODO: introduktion till del 1
+Den första delen behandlar inspektion och analys av ett lokalt nätverk.
 
 
 % ______________________________________________________________________________
@@ -84,6 +84,7 @@ Figur~\ref{fig:scr_1-network_A} och Figur~\ref{fig:scr_1-network_B} .
 \end{figure}
 
 
+
 % ______________________________________________________________________________
 \subsection{Nät- och Nodnummer}
 \subsubsection{Uppgiftsbeskrivning}
@@ -118,18 +119,19 @@ Programlistning~\ref{listing:sh_1-ipcalc_output}.
 % \end{figure}
 
 Resultatet visar datorns adress \texttt{192.168.1.112} och nätmasken
-\texttt{255.255.255.0}.  En binär \texttt{AND}-operation av den binära
-representationen ger nätverksadressen \texttt{192.168.1.0}, beskrivet i
-Programlistning~\ref{listing:sh_1-ipcalc_binary-and}.
+\texttt{255.255.255.0}.  
+
+Utförs en bitvis \texttt{AND}-operation med de binära representationerna av
+nätverksadressen \texttt{192.168.1.0} och nätmasken \texttt{255.255.255.0} som
+operander blir svaret en binär representation av nätadressen.
+
+Programlistning~\ref{listing:sh_1-ipcalc_binary-and} visar detta grafiskt.
 
 \begin{listing}[H]
   \shellcode{include/sh_1-ipcalc_binary-and}
-  \caption{Binär \texttt{AND} av adress och nätmask ger nätadress.}
+  \caption{Bitvis \texttt{AND} av nodadressen och nätmasken ger nätadressen.}
   \label{listing:sh_1-ipcalc_binary-and}
 \end{listing}
-
-
-
 
 
 
@@ -172,6 +174,7 @@ Anmärkningsvärt är att datorn rapporterar att den enhet som används är av t
 laptop som ansluter till nätverket genom en trådlös WIFI-anslutning så är det
 uppenbarligen inte sant.  Den trådbundna anslutningen är virtuell och skapas av
 \texttt{VirtualBox}.
+
 
 
 % ______________________________________________________________________________
