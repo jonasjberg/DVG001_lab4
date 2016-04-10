@@ -59,7 +59,8 @@ Figur~\ref{fig:sh_1-grep-logs.sh_output}
 \begin{figure}[htp]
   \centering
   \includegraphics[scale=0.85]{include/sh_1-grep-logs-sh_output.pdf}
-  \caption{Körning av programmet i Programlistning~\ref{listing:sh_1-grep-logs.sh}.}
+  \caption{Körning av programmet i
+           Programlistning~\ref{listing:sh_1-grep-logs.sh}.}
   \label{fig:sh_1-grep-logs.sh_output}
 \end{figure}
 
@@ -117,24 +118,31 @@ Figur~\ref{fig:sh_1-ipcalc_output}
 Uppgiften är att lista de routrar som maskinen känner till och dessutom ange
 vilken som är standardroutern.
 
+
 \subsubsection{Lösning}
-För att få en lista på routrar som datorn känner till används kommandot \texttt{ip route list}.
-Körning med resultat visas i Programlistning~\ref{listing:sh_1-ip-route-list}.
+För att få en lista på routrar som datorn känner till används kommandot
+\texttt{ip route list}.  Körning med resultat visas i
+Programlistning~\ref{listing:sh_1-ip-route-list}.
 
 \begin{listing}[H]
   \shellcode{include/sh_1-ip-route-list}
-  \caption{Körning av kommando för att lista information om routers på nätverk.}
+  \caption{Körning av kommando för att lista information om routers på
+           nätverk.}
   \label{listing:sh_1-ip-route-list}
 \end{listing}
 
-Resultatet visar att standard-routern har \texttt{IP}-adress \texttt{192.168.1.1}.
 
-Lite mer detaljerad men i stort sett samma information kan fås med \texttt{ip
-neighbor} som i Programlistning~\ref{listing:sh_1-ip-neighbor}. 
+Resultatet visar att standard-routern har \texttt{IP}-adressen
+\texttt{192.168.1.1}.
+
+
+I stort sett samma information, något mer detaljerad, kan fås med kommandot
+\texttt{ip neighbor}, enligt Programlistning~\ref{listing:sh_1-ip-neighbor}.
 
 \begin{listing}[H]
   \shellcode{include/sh_1-ip-neighbor}
-  \caption{Körning av kommando för att lista information maskiner i samma nät.}
+  \caption{Körning av kommando för att lista information om maskiner i samma
+           nätverk.}
   \label{listing:sh_1-ip-neighbor}
 \end{listing}
 
@@ -144,14 +152,15 @@ laptop som ansluter till nätverket genom en trådlös WIFI-anslutning så är d
 uppenbarligen inte sant.  Den trådbundna anslutningen är virtuell och skapas av
 \texttt{VirtualBox}.
 
+
 % ______________________________________________________________________________
 \subsectionM{\texttt{MAC}-adresser}
 \subsubsection{Uppgiftsbeskrivning}
 Här är uppgiften att lista \texttt{MAC}- och \texttt{IP}-adresser för alla
 maskiner i nätverket.
 
-\subsubsection{Lösning}
 
+\subsubsection{Lösning}
 För mer avancerade möjligheter används programmet \texttt{nmap}, som enkelt kan
 installeras från paketarkiven med t.ex. \texttt{apt}.  Programmet \texttt{nmap}
 är väldigt kraftfullt och har många användningsområden.  I det här fallet körs
@@ -161,15 +170,6 @@ eller ''ping sweep''.
 
 Följande beskrivning är hämtad ur manualsidan för \texttt{nmap(1)}
 \cite{manpage:nmap}:
-
-\begin{quotation}
-When  the  server  is  unreachable, send a burst of eight packets
-instead of the usual one.  The packet spacing is normally 2 s; however, the
-spacing between the first and second packets can be changed with the calldelay
-command to allow additional time for a modem or ISDN call to  complete.   This
-option is valid with only the server command and is a recommended option with
-this command.
-\end{quotation}
 
 \begin{quotation}
 Systems administrators often find this option valuable as well. It can easily
@@ -183,18 +183,17 @@ SYN to port 443, TCP ACK to port 80, and an ICMP timestamp request by default.
 When executed by an unprivileged user, only SYN packets are sent (using a
 connect call) to ports 80 and 443 on the target. When a privileged user tries
 to scan targets on a local ethernet network, ARP requests are used unless
---send-ip was specified. 
+--send-ip was specified.
 \end{quotation}
 
-Vidare ökar flaggar \texttt{-v} mängden text (''verbose mode'') och 
-\texttt{IP}-adresserna 
+Vidare används flaggan \texttt{-v} som ökar mängden information som visas
+(''verbose mode''). Det sista argumentet \texttt{192.168.1.1/24}, specifierar
+det adressområde som ska skannas. I det här fallet används nätmasken
+\texttt{/24} så att 256 adresser, från \texttt{192.168.1.0} till
+\texttt{192.168.1.255}, kommer att skannas.
 
-
-Även om \texttt{nmap} i det här fallet gott kan anses vara ''overkill'' så är
-det användbart i många scenarion och därför bra att känna till.
-
-Körningen visas i Programlistning~\ref{listing:sh_1-nmap-sn}.  Resultatet är
-delvis ''censurerat'' av säkerhetsskäl.
+Körningen visas i Programlistning~\ref{listing:sh_1-nmap-sn}.
+Resultatet är delvis ''censurerat'' av säkerhetsskäl.
 
 \begin{listing}[H]
   \shellcode{include/sh_1-nmap-sn}
@@ -202,7 +201,6 @@ delvis ''censurerat'' av säkerhetsskäl.
            nätverket. Resultatet är ''censurerat'' av säkerhetsskäl.}
   \label{listing:sh_1-nmap-sn}
 \end{listing}
-
 
 Resultatet redovisas även i Tabell~\ref{table:network}.
 
@@ -224,4 +222,6 @@ Resultatet redovisas även i Tabell~\ref{table:network}.
 \end{table}
 
 
+Även om \texttt{nmap} i det här fallet gott kan anses vara ''overkill'' så är
+det mycket användbart i många scenarion och därför bra att känna till.
 
