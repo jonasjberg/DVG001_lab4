@@ -33,22 +33,22 @@ Hur skulle ni skriva \texttt{/etc/network/interface} för respektive maskin
 \textbf{m1} och \textbf{m2}?  Ange hur ni har kommit fram till innehållet i
 filen.
 
-router   192.168.133.193/25
+För att räkna ut nätadresserna för \textbf{m1} och \textbf{m2} används programmet
+\texttt{ipcalc} enligt Programlistning~\ref{listing:sh_2-ipcalc}.
 
-Problembeskrivningen återges i Tabell~\ref{table:network}.
+ återges i Tabell~\ref{table:interface-config}.
 
 \begin{table}[]
   \centering
   \caption{Lista över \texttt{MAC}- och \texttt{IP}-adresser för maskiner på
            nätverket.}
-  \label{table:network}
+  \label{table:interface-config}
   \begin{tabular}{@{}llll@{}}
     \toprule
-    Enhet   & \texttt{IP}-adress     & \texttt{MAC}-address       & Enhetens tillverkare          \\ \midrule
-    router  & \texttt{192.168.133.193/25} & 
-    m1      & \texttt{192.168.1.1}   & \texttt{04:EC:08:A7:8B:A0} & Tp-link Technologies CO.      \\
-    m2      & \texttt{192.168.1.101} & \texttt{08:9E:0C:A4:50:30} & Apple                         \\
-    \texttt{192.168.1.110} & \texttt{04:11:0B:37:FC:90} & Hewlett Packard               \\ \bottomrule
+    Enhet  & Nodadress                & Nätmask                  & \texttt{IP}-adress          \\ \midrule
+    router & \texttt{192.168.133.193} & \texttt{255.255.255.128} & \texttt{192.168.133.193/25} \\
+    m1     & \texttt{10}              & \texttt{255.255.255.128} & \texttt{255.192.0.0}        \\
+    m2     & \texttt{20}              & \texttt{255.255.255.128} & \texttt{255.255.240.0}      \\ \bottomrule
   \end{tabular}
 \end{table}
 
