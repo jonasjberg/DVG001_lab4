@@ -56,10 +56,31 @@ Resultatet presenteras mer överskådligt i Tabell~\ref{table:interface-config}.
   \begin{tabular}{@{}llll@{}}
     \toprule
     Enhet  & Nodadress                & Nätmask                  & \texttt{IP}-adress          \\ \midrule
-    router & \texttt{192.168.133.193} & \texttt{255.255.255.128} & \texttt{192.168.133.193/25} \\
-    m1     & \texttt{10}              & \texttt{255.255.255.128} & \texttt{255.192.0.0}        \\
-    m2     & \texttt{20}              & \texttt{255.255.255.128} & \texttt{255.255.240.0}      \\ \bottomrule
+    router & \texttt{192.168.133.193} & \texttt{255.255.255.128} & \texttt{192.168.133.193} \\
+    m1     & \texttt{192.168.133.10}  & \texttt{255.255.255.128} & \texttt{}        \\
+    m2     & \texttt{192.168.133.20}  & \texttt{255.255.255.128} & \texttt{}      \\ \bottomrule
   \end{tabular}
 \end{table}
 
-Programmet klagar över den märkliga nätmasken.
+
+\subsubsubsection{Konfigurationsfilerna \texttt{/etc/network/interface}}
+Konfigurationsfilerna skrevs enligt \cite{debian:network} för att få formen
+nedan.
+
+För \textbf{m1} får konfigurationsfilen \texttt{/etc/network/interface}
+utseendet i Programlistning~\ref{listing:sh_2-interface-m1}.  Och för
+\textbf{m2} skulle motsvarande konfigurationsfil se ut som i
+Programlistning~\ref{listing:sh_2-interface-m2}.
+
+
+\begin{listing}[H]
+  \shellcode{include/sh_2-interface-m1}
+  \caption{Konfigurationsfil för \textbf{m1}.}
+  \label{listing:sh_2-interface-m1}
+\end{listing}
+
+\begin{listing}[H]
+  \shellcode{include/sh_2-interface-m2}
+  \caption{Konfigurationsfil för \textbf{m2}.}
+  \label{listing:sh_2-interface-m2}
+\end{listing}
