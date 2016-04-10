@@ -94,7 +94,8 @@ Uppgiften är här att ange vilken nätadress man har genom att använda
 \subsubsection{Lösning}
 För detaljerad information om datorns \texttt{IP}-adress körs kommandot i
 Programlistning~\ref{listing:sh_1-ipcalc}. Resultatet av körningen visas i
-Figur~\ref{fig:sh_1-ipcalc_output}
+% Figur~\ref{fig:sh_1-ipcalc_output}
+Programlistning~\ref{listing:sh_1-ipcalc_output}.
 
 \begin{listing}[H]
   \shellcode{include/sh_1-ipcalc}
@@ -103,12 +104,32 @@ Figur~\ref{fig:sh_1-ipcalc_output}
   \label{listing:sh_1-ipcalc}
 \end{listing}
 
-\begin{figure}[htp]
-  \centering
-  \includegraphics[scale=0.85]{include/sh_1-ipcalc_output.pdf}
+\begin{listing}[H]
+  \shellcode{include/sh_1-ipcalc_output.txt}
   \caption{Körning av programmet i Programlistning~\ref{listing:sh_1-ipcalc}.}
-  \label{fig:sh_1-ipcalc_output}
-\end{figure}
+  \label{listing:sh_1-ipcalc_output}
+\end{listing}
+
+% \begin{figure}[htp]
+%   \centering
+%   \includegraphics[scale=0.85]{include/sh_1-ipcalc_output.pdf}
+%   \caption{Körning av programmet i Programlistning~\ref{listing:sh_1-ipcalc}.}
+%   \label{fig:sh_1-ipcalc_output}
+% \end{figure}
+
+Resultatet visar datorns adress \texttt{192.168.1.112} och nätmasken
+\texttt{255.255.255.0}.  En binär \texttt{AND}-operation av den binära
+representationen ger nätverksadressen \texttt{192.168.1.0}, beskrivet i
+Programlistning~\ref{listing:sh_1-ipcalc_binary-and}.
+
+\begin{listing}[H]
+  \shellcode{include/sh_1-ipcalc_binary-and}
+  \caption{Binär \texttt{AND} av adress och nätmask ger nätadress.}
+  \label{listing:sh_1-ipcalc_binary-and}
+\end{listing}
+
+
+
 
 
 
@@ -154,7 +175,7 @@ uppenbarligen inte sant.  Den trådbundna anslutningen är virtuell och skapas a
 
 
 % ______________________________________________________________________________
-\subsectionM{\texttt{MAC}-adresser}
+\subsection{\texttt{MAC}-adresser}
 \subsubsection{Uppgiftsbeskrivning}
 Här är uppgiften att lista \texttt{MAC}- och \texttt{IP}-adresser för alla
 maskiner i nätverket.
