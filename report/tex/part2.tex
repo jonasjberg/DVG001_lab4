@@ -38,8 +38,16 @@ filen.
 \subsubsection{Lösning}
 För att räkna ut nätadresserna för \textbf{m1} och \textbf{m2} används programmet
 \texttt{ipcalc} enligt Programlistning~\ref{listing:sh_2-ipcalc}.
-Resultatet presenteras mer överskådligt i Tabell~\ref{table:interface-config}.
+De första och sista möjliga adressen visas på rad 15 och 16 i Programlistning~\ref{listing:sh_2-ipcalc}:
+\begin{verbatim}
+HostMin: 192.168.133.129
+HostMax: 192.168.133.254
+\end{verbatim}
+Det ger alltså $154 - 129 = 125$ möjliga adresser på nätet.
 
+Nyckeln i lösningen av uppgiften är det faktum att maskin \texttt{m1} ska ha
+adress nummer 10 bland alla sekventiellt ordnade möjliga adresser. Likaså ska
+maskin \texttt{m2} ha den tjugonde adressen bland nätets möjliga adresser.
 
 \begin{listing}[H]
   \shellcode{include/sh_2-ipcalc}
@@ -48,19 +56,20 @@ Resultatet presenteras mer överskådligt i Tabell~\ref{table:interface-config}.
 \end{listing}
 
 
-\begin{table}[]
-  \centering
-  \caption{Lista över \texttt{MAC}- och \texttt{IP}-adresser för maskiner på
-           nätverket.}
-  \label{table:interface-config}
-  \begin{tabular}{@{}llll@{}}
-    \toprule
-    Enhet  & Nodadress                & Nätmask                  & \texttt{IP}-adress       \\ \midrule
-    router & \texttt{192.168.133.193} & \texttt{255.255.255.128} & \texttt{192.168.133.193} \\
-    m1     & \texttt{192.168.133.10}  & \texttt{255.255.255.128} & \texttt{192.168.133.193} \\
-    m2     & \texttt{192.168.133.20}  & \texttt{255.255.255.128} & \texttt{192.168.133.193} \\ \bottomrule
-  \end{tabular}
-\end{table}
+% Resultatet presenteras mer överskådligt i Tabell~\ref{table:interface-config}.
+% \begin{table}[]
+%   \centering
+%   \caption{Lista över \texttt{MAC}- och \texttt{IP}-adresser för maskiner på
+%            nätverket.}
+%   \label{table:interface-config}
+%   \begin{tabular}{@{}llll@{}}
+%     \toprule
+%     Enhet  & Nodadress                & Nätmask                  & \texttt{IP}-adress       \\ \midrule
+%     router & \texttt{192.168.133.193} & \texttt{255.255.255.128} & \texttt{192.168.133.193} \\
+%     m1     & \texttt{192.168.133.10}  & \texttt{255.255.255.128} & \texttt{192.168.133.193} \\
+%     m2     & \texttt{192.168.133.20}  & \texttt{255.255.255.128} & \texttt{192.168.133.193} \\ \bottomrule
+%   \end{tabular}
+% \end{table}
 
 
 \subsubsection{Konfigurationsfilerna \texttt{/etc/network/interface}}
